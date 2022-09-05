@@ -71,6 +71,7 @@ public class LoginoutController {
 		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");  
 		   LocalDateTime now = LocalDateTime.now(); 
 		
+		
 		 if(coursedao.couresMaxid()!=0) {
 				int i =coursedao.couresMaxid();
 				i+= 1;
@@ -86,15 +87,7 @@ public class LoginoutController {
 				request.getSession().setAttribute("stuno",i);
 			}
 		
-		 StudentRes rw = new StudentRes();
-			rw.setId(7);
-		 StudentRes r =studentdao.getone(rw);
-			Student stu = Student.builder().id(String.valueOf(req.getId())).name(r.getName())
-					.dob(r.getDob()).gender(r.getGender()).phone(r.getPhone())
-					.education(r.getEducation()).courseres(r.getCourseres()).build();
-			System.out.println("stu id  "+stu.getId());
-			stu.getCourseres().forEach(j -> System.out.println(" stu course "+j));
-		
+
 //			coursedao.getcourseofone(8).forEach(j -> System.out.println(" stu course "+j));
 
 
@@ -103,7 +96,7 @@ public class LoginoutController {
 		request.getSession().setAttribute("login",logindao.login(req));
 		request.getSession().setAttribute("date",dtf.format(now));
 		request.getSession().setAttribute("user",userdao.showUser());
-//		request.getSession().setAttribute("user",session.getMapper(Userdao.class).showUser());
+		request.getSession().setAttribute("user",userdao.showUser());
 		request.getSession().setAttribute("student",studentdao.showStudent());	
 		
 		

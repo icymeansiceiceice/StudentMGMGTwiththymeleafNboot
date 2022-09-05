@@ -38,7 +38,7 @@
 				</div>
 				<div class="col-md-1">
 					<input type="button" class="btn-basic" id="lgnout-button"
-						value="Log Out" onclick="location.href='/com.stu/Logout'">
+						value="Log Out" onclick="location.href='/Logout'">
 				</div>
 			</div>
 		</div>
@@ -78,11 +78,11 @@
 
 
 							<span th:if="${session.stuno == null }"> <input
-								type="text" placeholder="User Name" th:text="${session.stuno}"
+								type="text" placeholder="User Name"
 								th:attr="name= 'id' " th:value="1" readonly="readonly"
 								class="form-control" id="studentID">
 							</span> <span th:if="${session.stuno != null }"> <input
-								type="text" placeholder="User Name" th:text="${session.stuno}"
+								type="text" placeholder="User Name" 
 								th:attr="name= 'id'" th:value="${session.stuno}"
 								readonly="readonly" class="form-control" id="studentID">
 							</span>
@@ -170,7 +170,7 @@
 
 
 								<input type="checkbox" th:field=*{attend}
-									th:value="${c.cid+','+c.name}" class="form-check-input"
+									th:value="${c.cid+'!'+c.name}" class="form-check-input"
 									id="gridRadios1"> <label class="form-check-label"
 									for="gridRadios1" th:text="${c.name}"> </label>
 							</div>

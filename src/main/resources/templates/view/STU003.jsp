@@ -31,7 +31,7 @@
           <p th:text="${session.date}"></p>
     </div>  
     <div class="col-md-1" >
-        <input type="button" class="btn-basic" id="lgnout-button" value="Log Out" onclick="location.href='/com.stu/Logout'">
+        <input type="button" class="btn-basic" id="lgnout-button" value="Log Out" onclick="location.href='/Logout'">
     </div>        
 </div>
 </div>
@@ -46,11 +46,11 @@
         <button class="dropdown-btn" > Class Management <i class="fa fa-caret-down"></i></button>
         
             <div class="dropdown-container">
-          <a href="/stubatis/courseRegister">Course Registration </a>
-          <a href="/stubatis/registerStudent">Student Registration </a>
-          <a href="/stubatis/showuser">Student Search </a>
+          <a href="/courseRegister">Course Registration </a>
+          <a href="/registerStudent">Student Registration </a>
+          <a href="/showuser">Student Search </a>
         </div>
-        <a href="/stubatisu/UserShow">Users Management</a>
+        <a href="/UserShow">Users Management</a>
       </div>
       <div class="main_contents">
     <div id="sub_content">

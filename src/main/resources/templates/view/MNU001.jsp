@@ -35,7 +35,7 @@
            
         </div>  
         <div class="col-md-1" >
-            <input type="button" class="btn-basic" id="lgnout-button" value="Log Out" onclick="location.href='/com.stu/Logout'">
+            <input type="button" class="btn-basic" id="lgnout-button" value="Log Out" onclick="location.href='/Logout'">
         </div>        
     </div>
 </div>

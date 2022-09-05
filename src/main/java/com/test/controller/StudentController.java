@@ -50,16 +50,30 @@ public class StudentController {
 		
 		
 		List<CourseRes> b = new ArrayList<>();
+	
 		for(String a : stu.getAttend()) {
 			
-		 
-		String [] g = a.split(",");
+		
+		String [] g = a.split("!");	
+
+		
 		CourseRes res = new CourseRes();
-		res.setCid(Integer.valueOf(g[0]));
+		
+		res.setCid(Integer.parseInt(g[0]));
 		res.setName(g[1]);
 		b.add(res);
 		
 		}
+		
+
+		
+		
+		
+		
+		
+		
+		
+		
 		
 		
 		StudentRes req = new StudentRes();
@@ -150,7 +164,7 @@ public class StudentController {
 		for(String a : stu.getAttend()) {
 			
 		 
-		String [] g = a.split(",");
+		String [] g = a.split("!");
 		CourseRes res = new CourseRes();
 		res.setCid(Integer.valueOf(g[0]));
 		res.setName(g[1]);

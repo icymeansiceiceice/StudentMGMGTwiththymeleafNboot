@@ -33,7 +33,7 @@
           <p th:text="${session.date}"></p>
         </div>  
         <div class="col-md-1" >
-            <input type="button" class="btn-basic" id="lgnout-button" value="Log Out" onclick="location.href='/com.stu/Logout'">
+            <input type="button" class="btn-basic" id="lgnout-button" value="Log Out" onclick="location.href='/Logout'">
         </div>        
     </div>
     </div>
@@ -55,8 +55,8 @@
       <div class="main_contents">
     <div id="sub_content">
     
-    <p style="color: red;">${error}</p>
-  
+    
+   <p th:text="${error}" style="color: red;"	></p>
       
       <form action="#" th:action="@{/StudentUpdate}" th:object="${stud}" method="post" >
         
@@ -135,12 +135,15 @@
     			
                 <div class="col-md-4">
                
-                <div class="form-check-inline col-md-2" th:each = "c : ${session.course}" >
+                <div class="form-check-inline col-md-2"  th:each = "c : ${session.course}" >
                 
-               <input type="checkbox"  th:field = *{attend}  th:value="${c.cid+','+c.name}"  class="form-check-input" id="gridRadios1">
+               <input type="checkbox" 
+               th:field = *{attend}  th:value="${c.cid+'!'+c.name}"  th:text = "${c.name}"
+               
+               class="form-check-input" id="gridRadios1" >
                
                  
-                    <label class="form-check-label" for="gridRadios1" th:text = "${c.name}">
+                    <label class="form-check-label" for="gridRadios1" >
                            
                         </label>
                     </div>

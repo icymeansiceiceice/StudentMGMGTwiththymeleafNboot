@@ -32,7 +32,7 @@
           <p th:text="${session.date}"></p>
         </div>  
         <div class="col-md-1" >
-            <input type="button" class="btn-basic" id="lgnout-button" value="Log Out" onclick="location.href='/com.stu/Logout'">
+            <input type="button" class="btn-basic" id="lgnout-button" value="Log Out" onclick="location.href=/com.stu/Logout'">
         </div>        
     </div>
 </div>
@@ -66,7 +66,7 @@
             <label for="id" class="col-md-2 col-form-label"> ID</label>
             <div class="col-md-4">
             
-			<input type="text" placeholder="User Name" th:text = "${session.cid}" th:attr="name= 'id' " th:value="${session.cid}"  class="form-control" id="inputPassword2"   >
+			<input type="text" placeholder="User Name"  th:attr="name= 'id' " th:value="${session.cid}"  class="form-control" id="inputPassword2"   >
            
                 
             </div>
